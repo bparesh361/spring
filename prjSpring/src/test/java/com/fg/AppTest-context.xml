@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<bean id="msg" class="com.fg.MessagePropogation">
+	<constructor-arg value="learning spring is a fun !!!" />
+	<property name="setterMsg" value="Learnign IOC is fun !!! "></property>
+</bean>
+
+<bean id="springmsg" class="com.fg.SpringMsgPropogation">	
+	<property name="messagePropogation" ref="msg" />
+</bean>
+
+</beans>

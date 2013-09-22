@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                        http://www.springframework.org/schema/beans/spring-beans.xsd
+                        http://www.springframework.org/schema/aop 
+  						http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+
+
+	<aop:aspectj-autoproxy />
+	
+	<bean id="msg" class="com.fg.MessagePropogation">
+		<constructor-arg value="learning spring is a fun !!!" />
+		<property name="setterMsg" value="Learnign IOC is fun !!! "></property>
+	</bean>
+
+	<bean id="springmsg" class="com.fg.SpringMsgPropogation">
+		<property name="messagePropogation" ref="msg" />
+	</bean>
+
+	<!--  Aspect -->
+	<bean id="loggingAdvice" class="com.fg.LogginAdvice" />
+	<bean id="exceptionAdvice" class="com.fg.ExceptionAspect" />
+
+</beans>
