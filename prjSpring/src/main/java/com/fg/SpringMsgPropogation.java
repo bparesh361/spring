@@ -14,7 +14,7 @@ public class SpringMsgPropogation {
 	
 	public void hello(){
 		System.out.println("Hello....");
-		throw new RuntimeException("exception throwing explicitly...");
+//		throw new RuntimeException("exception throwing explicitly...");
 	}
 	
 	

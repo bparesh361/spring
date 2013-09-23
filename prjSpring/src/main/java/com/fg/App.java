@@ -3,6 +3,8 @@ package com.fg;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+
+
 /**
  * Hello world!
  *
@@ -11,7 +13,7 @@ public class App
 {
     public static void main( String[] args )
     {
-    	System.out.println("Spring Demo for IOC and AOP Concepts.");
+    	System.out.println("Spring Demo for IOC and AOP Concepts....");
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
         MessagePropogation msg = (MessagePropogation)context.getBean("msg");
         System.out.println(msg.getMessage());
